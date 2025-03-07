@@ -33,11 +33,15 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-       
               "src/404.html",
               "src/.nojekyll",
-             "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "public",
+                "ignore": ["**/.DS_Store"]
+              }
             ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
