@@ -31,5 +31,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages    # The branch the action should deploy to.
+          branch: master   # The branch the action should deploy to.
           folder: dist/gwc-monitoring-webapp   # The folder where Angular build outputs reside.
