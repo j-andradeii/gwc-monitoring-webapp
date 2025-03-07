@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular App
-        run: npm run build -- --base-href=https://github.com/j-andradeii/gwc-monitoring-webapp.git
+        run: npm run build -- --base-href=/gwc-monitoring-webapp.git
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
