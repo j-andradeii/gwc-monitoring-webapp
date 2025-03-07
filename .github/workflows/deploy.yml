@@ -5,6 +5,7 @@ on:
     branches:
       - master  # Change this to your default branch if different
       - IMP-PROJECT-STRUCTURE
+      - gh-pages
 
 jobs:
   build-and-deploy:
