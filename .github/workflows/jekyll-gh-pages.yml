@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Make sure this path matches the outputPath in angular.json
-          path: dist/my-angular-app
+          path: dist/gwc-monitoring-webapp
 
   deploy:
     runs-on: ubuntu-latest
