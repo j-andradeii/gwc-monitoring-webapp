@@ -33,7 +33,7 @@ jobs:
         run: npm run build -- --base-href=/gwc-monitoring-webapp/
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: dist/gwc-monitoring-webapp
 
@@ -42,4 +42,4 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4  # No download step needed
+        uses: actions/deploy-pages@v4
