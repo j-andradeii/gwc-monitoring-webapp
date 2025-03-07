@@ -30,13 +30,14 @@ jobs:
         run: npm ci
 
       - name: Build Angular App
-        # If your repo name is "gwc-monitoring-webapp", you typically do:
+        # Adjust --base-href to match your project's GitHub Pages URL path if needed.
         run: npm run build -- --base-href=/gwc-monitoring-webapp/
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: dist/gwc-monitoring-webapp  # Ensure this matches your actual output folder
+          # Make sure this path matches the outputPath in angular.json
+          path: dist/my-angular-app
 
   deploy:
     runs-on: ubuntu-latest
