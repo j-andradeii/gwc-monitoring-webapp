@@ -33,10 +33,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+       
+              "src/404.html",
+              "src/.nojekyll",
+             "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
