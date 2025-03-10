@@ -1,12 +1,12 @@
 
 
-<p-button label="Primary1" />
-<p-button label="Secondary1" severity="secondary" />
-<p-button label="Success1" severity="success" />
-<p-button label="Info1" severity="info" />
-<p-button label="Warn1" severity="warn" />
-<p-button label="Help1" severity="help" />
-<p-button label="Danger1" severity="danger" />
-<p-button label="Contrast" severity="contrast" />
+<p-button label="Primary1" (click)="title = 'Primary1'" />
+<p-button label="Secondary1" severity="secondary" (click)="title = 'Secondary1'" />
+<p-button label="Success1" severity="success" (click)="title = 'Success1'" />
+<p-button label="Info1" severity="info" (click)="title = 'Info1'" />
+<p-button label="Warn1" severity="warn" (click)="title = 'Warn1'" />
+<p-button label="Help1" severity="help" (click)="title = 'Help1'" />
+<p-button label="Danger1" severity="danger" (click)="title = 'Danger1'" />
+<p-button label="Contrast1" severity="contrast" (click)="title = 'Contrast1'" />
 
 {{title}}
