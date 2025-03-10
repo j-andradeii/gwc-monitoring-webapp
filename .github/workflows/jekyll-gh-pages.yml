@@ -33,7 +33,7 @@ jobs:
         run: npm run build -- --base-href=/ -c=production
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist/gwc-monitoring-webapp/*  # Replace with your actual Angular project name
 
