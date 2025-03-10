@@ -25,16 +25,16 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-
+      
       - name: Install Dependencies
-        run: npm install  # Make sure dependencies are installed
+        run: npm install
 
       - name: Build Angular App
-        run: npm run build --  --base-href=/gwc-monitoring-webapp/
-        # This command builds the app to dist/gwc-monitoring-webapp.
-   
+        run: npm run build -- --base-href=/gwc-monitoring-webapp/
+        # Adjust --base-href if needed for your repo name.
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: dist/gwc-monitoring-webapp
 
@@ -46,8 +46,8 @@ jobs:
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-pages-artifact@v3
+        uses: actions/download-pages-artifact@v1
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v1
