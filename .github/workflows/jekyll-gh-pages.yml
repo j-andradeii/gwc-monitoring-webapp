@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # Added write permission
   pages: write
   id-token: write
 
@@ -22,16 +22,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4  # Updated to v4
         with:
           node-version: '20'
-      
+
       - name: Install Dependencies
         run: npm install
 
       - name: Build Angular App
-        run: npm run build -- --base-href=/gwc-monitoring-webapp/
-        # Adjust --base-href if needed for your repo name.
+        run: npm run build -- --base-href=/gwc-monitoring-webapp/  # Added production config
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -46,8 +45,8 @@ jobs:
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-pages-artifact@v1
+        uses: actions/download-pages-artifact@v3
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
