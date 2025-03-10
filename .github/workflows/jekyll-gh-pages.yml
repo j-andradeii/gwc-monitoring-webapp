@@ -24,15 +24,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install Dependencies
+        run: npm install  # Make sure dependencies are installed
 
       - name: Build Angular App
         run: npm run build --  --base-href=/gwc-monitoring-webapp/
-        # This command builds the app and outputs files to dist/gwc-monitoring-webapp.
-      
+        # This command builds the app to dist/gwc-monitoring-webapp.
+   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
