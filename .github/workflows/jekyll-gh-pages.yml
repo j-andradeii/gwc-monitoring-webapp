@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true  # Better to cancel previous deployments
 
 jobs:
   build:
@@ -30,12 +30,12 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build -- --base-href=/gwc-monitoring-webapp/
+        run: npm run build -- --base-href=/ -c=production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/gwc-monitoring-webapp/.   # Note the trailing dot
+          path: dist/gwc-monitoring-webapp/*  # Replace with your actual Angular project name
 
   deploy:
     environment:
