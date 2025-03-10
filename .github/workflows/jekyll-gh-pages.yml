@@ -34,7 +34,7 @@ jobs:
         # Adjust --base-href if needed for your repo name.
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist/gwc-monitoring-webapp
 
